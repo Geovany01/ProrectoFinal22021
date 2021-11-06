@@ -32,6 +32,42 @@
         <servlet-name>SrCerrarSesion</servlet-name>
         <servlet-class>controlador.SrCerrarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ComprasReporte</servlet-name>
+        <servlet-class>controlador.ComprasReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarcasReporte</servlet-name>
+        <servlet-class>controlador.MarcasReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductosReporte</servlet-name>
+        <servlet-class>controlador.ProductosReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProveedoresReporte</servlet-name>
+        <servlet-class>controlador.ProveedoresReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VentasReporte</servlet-name>
+        <servlet-class>controlador.VentasReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sr_compras</servlet-name>
+        <servlet-class>controlador.sr_compras</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sr_compras_detalle</servlet-name>
+        <servlet-class>controlador.sr_compras_detalle</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sr_ventas</servlet-name>
+        <servlet-class>controlador.sr_ventas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sr_ventas_detalle</servlet-name>
+        <servlet-class>controlador.sr_ventas_detalle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SrCliente</servlet-name>
         <url-pattern>/SrCliente</url-pattern>
@@ -63,6 +99,42 @@
     <servlet-mapping>
         <servlet-name>SrCerrarSesion</servlet-name>
         <url-pattern>/SrCerrarSesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComprasReporte</servlet-name>
+        <url-pattern>/ComprasReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarcasReporte</servlet-name>
+        <url-pattern>/MarcasReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductosReporte</servlet-name>
+        <url-pattern>/ProductosReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProveedoresReporte</servlet-name>
+        <url-pattern>/ProveedoresReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VentasReporte</servlet-name>
+        <url-pattern>/VentasReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_compras</servlet-name>
+        <url-pattern>/sr_compras</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_compras_detalle</servlet-name>
+        <url-pattern>/sr_compras_detalle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_ventas</servlet-name>
+        <url-pattern>/sr_ventas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_ventas_detalle</servlet-name>
+        <url-pattern>/sr_ventas_detalle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -6,8 +6,8 @@
 
 <%@page import="javax.swing.table.DefaultTableModel"%>
 <%@page import="modelo.InicioSesion"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,39 +17,20 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     </head>
-    <body>
-        <%--
-        <div class="container col-lg-3">
-            <form action="principal.jsp">
-                <div class="form-group text-center">
-                    <img src="img/user.png" alt="" height="80" width="80"/>
-                    <p><strong>Bienvenidos</strong></p>
-                </div> 
-                <div class="from-group">
-                    <label>Nombres:</label>
-                    <input class="form-control" type="txtnom" name="txtnom" placeholder="Ingrese Nombres">
-                </div>
-                <div class="from-group">
-                    <label>Email:</label>
-                    <input type="email" name="txtCorreo" placeholder="example@gmail.com" class="form-control">
-                </div>
-                <input class="btn btn-danger btn-block"  type="submit" name="accion" value="Ingresar">
-            </form>                         
-        </div>
-        --%>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <p class="navbar-brand"> Menu</p>
-            <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+    <body background="img/background.jpg" style="background-repeat: no-repeat; background-size: cover;">
+        <nav class="navbar navbar-expand-sm justify-content-center color-light navbar-dark bg-dark ">
+            <a href="index.jsp"><p class="navbar-brand" style="margin-right: 95px; margin-left: 40px;"> Inicio</p></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
                 <span class="navbar-toggler-icon"></span>
-            </button> --%>
-            <div class="//collapse navbar-collapse// justify-content-md-center" id="">
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
 
-                <ul class="navbar-nav //mr-auto//">
+                <ul class="navbar-nav mr-auto">
                     <%
                         HttpSession s = request.getSession();
                         //Acceder a Session
                         if ((String) s.getAttribute("U") == null || (int) s.getAttribute("R") < 1) {
-                            response.sendRedirect("index.jsp");
+                            response.sendRedirect("InicioSesion.jsp");
                         } else {
                             InicioSesion login = new InicioSesion((String) s.getAttribute("U"), "");
                             DefaultTableModel tabla = new DefaultTableModel();
@@ -72,7 +53,7 @@
                             String image = "<li class='nav-item dropdown' style='color:#fff; margin-top:5px;' >"
                                     + "<img src='" + login.LinkImage() + "' style='border-radius:50%;margin-right:5px;' width='30' height='30' alt=''>" + (String) s.getAttribute("U") + " (" + rolEscrito + ")</li>";
                             if (login.LinkImage().isEmpty()) {
-                                image = "<li class='nav-item dropdown' style='color:#fff; margin-top:5px;'>"
+                                image = "<li class='nav-item dropdown' style='color:#fff; margin-right:180px;'>"
                                         + "<img src='https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png' style='border-radius:50%; margin-right:5px;' width='30' height='30' alt=''>" + (String) s.getAttribute("U") + "</li>";
                             }
 
@@ -84,7 +65,7 @@
                                 {
                                 }
                                 else{
-                                String drop = "<li class='nav-item dropdown'>"
+                                String drop = "<li class='nav-item  mr-4 dropdown'>"
                                         + "<a class='nav-link dropdown-toggle' href='#' id='a" + tabla.getValueAt(t, 0) + "' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>"
                                         + tabla.getValueAt(t, 1) + "<a/>"
                                         + " <div class='dropdown-menu' aria-labelledby='a" + tabla.getValueAt(t, 0) + "'>"
@@ -112,7 +93,7 @@
 
                     %>
                     <li class='nav-item dropdown'>
-                        <a class='nav-link' href='SrCerrarSesion'>Cerrar Sesion</a>
+                        <a class='nav-link ml-5' href='SrCerrarSesion' style="color:#fff">Cerrar Sesion</a>
                     </li>
                 </ul>
             </div>

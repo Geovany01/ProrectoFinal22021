@@ -44,11 +44,11 @@ public class SrInicioSesion extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            login = new InicioSesion(request.getParameter("txt_usuario"), request.getParameter("txt_contrasena"));
+            login = new InicioSesion(request.getParameter("user"), request.getParameter("password"));
 
             if (login.VerificarCredenciales() > 0) {
                 HttpSession s = request.getSession();
-                s.setAttribute("U",request.getParameter("txt_usuario"));
+                s.setAttribute("U",request.getParameter("user"));
                 if(login.SolicitarRol()>0){
                 s.setAttribute("R",login.SolicitarRol());
                 response.sendRedirect("index.jsp");
