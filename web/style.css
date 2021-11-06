@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#45cdf7 0.5px, transparent 0.5px), radial-gradient(#45cdf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    display: flex;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.form {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 1em 1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 80%);
+    text-align: center;
+}
+
+.form_title {
+    font-size: 1.5rem;
+    margin-bottom: .1em;
+}
+
+.form_container {
+    margin-top: 1em;
+    display: grid;
+    gap: .7em;
+}
+
+.form_group {
+    position: relative;
+    --color: #5757577e;
+}
+
+.form_imput {
+    width: 100%;
+    background:none ;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form_imput:focus + .form_label, .form_imput:not(:placeholder-shown) + .form_label {
+    transform: translateY(-5px) scale(.7);
+    transform-origin: left top;
+    color: #dc3545;
+}
+
+::placeholder {
+    text-align: right;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form_label {
+    color: #3866f2 /*var(--color)*/;
+    /*cursor: pointer;*/
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(8px);
+    transition: transform .5s, color .3s;
+}
+
+.form_submit {
+    
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em .6em;
+    border: none;
+    border-radius: .5em;
+}
+
+.dropMarca {
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 2em;
+    border: 1px solid #007bff;
+    border-radius: .5em;
+    margin-right: 25px;
+}
+
+#btn_agregar {
+    background-color: #007bff;
+}
+
+#btn_modificar {
+    background-color: #17a2b8;
+}
+
+#btn_eliminar {
+    background-color: #dc3545;
+}
+
+
+.form_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.form_imput:focus ~ .form_line, .form_imput:not(:placeholder-shown) ~ .form_line {
+    transform: scale(1);
+}
+
+
+/*TABLE*/
+h1 {
+    text-align: center;
+}
+
+table thead {
+    background-color: #72c8f1;
+    text-align: center;
+}
+
+table tr {
+    text-align: center;
+}
+
+
+table tr:nth-child(even) {
+    background-color: #e4fbfb;
+}
+
+.modal-body {
+    background: #e4fbfb;
+}
+
+.contenedor {
+    width: 30%;   
+    margin: auto;
+    margin-top: 60px;
+}
+
+.contenedorEmpleado {
+    width: 80%;   
+    margin: auto;
+    margin-top: 60px;
+}
+
+.contenedorProducto {
+    width: 80%;   
+    margin: auto;
+    margin-top: 60px;
+}
+
+
