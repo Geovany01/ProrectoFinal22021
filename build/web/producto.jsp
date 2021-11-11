@@ -145,7 +145,7 @@ pattern="[E]{1}[0-9]{3}" required
                                             %>
 
                                         </select>
-                                        <a href="marca.jsp"><button type="button" id="btn_modificar" class="form_submit">Crud Marca</button></a>
+                                        
 
                                     </div>
 
@@ -238,6 +238,7 @@ pattern="[E]{1}[0-9]{3}" required
             </table>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProducto" onclick="limpiar()">Nuevo</button>
             <a href="index.jsp"><button type="button" class="btn btn-danger">Atrás <--</button></a>
+            <a href="marca.jsp"><button type="button" id="btn_modificar" class="form_submit">Crud Marca</button></a>
         </div> 
 
 

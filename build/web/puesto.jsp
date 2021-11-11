@@ -165,6 +165,8 @@
             </table>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPuesto" onclick="limpiar()">Nuevo</button>
             <a href="index.jsp"><button type="button" class="btn btn-danger">Atrás <--</button></a>
+            <a href="empleado.jsp"><button type="button" id="btn_modificar" class="form_submit">Crud Empleado</button></a>
+
 
         </div>
 

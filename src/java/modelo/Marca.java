@@ -123,7 +123,7 @@ public class Marca {
             String query;
             nuevaConexion = new Conexion();
             nuevaConexion.abrirConexion();
-            query = "delete from marcas where idMarcas = ?;";
+            query = "delete from marcas where idMarca = ?;";
             parametro = (PreparedStatement) nuevaConexion.conexionBD.prepareStatement(query);
             parametro.setInt(1, getIdMarca());
             retorno = parametro.executeUpdate();

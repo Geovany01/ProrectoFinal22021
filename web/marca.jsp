@@ -150,6 +150,8 @@
             </table>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMarca" onclick="limpiar()">Nuevo</button>
             <a href="index.jsp"><button type="button" class="btn btn-danger">Atrás <--</button></a>
+            <a href="puesto.jsp"><button type="button" id="btn_modificar" class="form_submit">Crud Puesto</button></a>
+
 
         </div>
 
